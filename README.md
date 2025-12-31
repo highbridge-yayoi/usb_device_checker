@@ -5,3 +5,7 @@
 1. ノードを実行:
    ```bash
    ros2 run usb_device_checker usb_monitor --ros-args -p device_path:=「/dev/ttyUSB0」
+   ```
+## 権利について
+- このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布及び使用が許可されます．
+- © 2025 ryo takahashi
