@@ -4,8 +4,8 @@
 指定したデバイスパス（例：`/dev/ttyUSB0`）の存在を確認し，接続状態に変化があった場合にログを表示すると同時に，現在のステータスをJSON形式で配信します．
 
 ## 内容
-- 
-- copylight，flake8，pylint，pep257，pytest
+- USBチェッカー
+- `copylight`，`flake8`，`pylint`，`pep257`，`pytest`
 - launchファイルをによる入力の簡易化
 
 ## 使用方法
