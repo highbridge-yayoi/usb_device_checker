@@ -14,3 +14,5 @@ def generate_launch_description():
             output='screen'
         )
     ])
+    # WSL2で動作確認をする為の監視リスト
+    # '/dev/null', '/dev/ttys0', '/dev/dummy'
