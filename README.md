@@ -5,7 +5,6 @@
 
 ## 内容
 - USBチェッカー
-- `copylight`，`flake8`，`pylint`，`pep257`，`pytest`
 - launchファイルをによる入力の簡易化
 
 ## 使用方法
