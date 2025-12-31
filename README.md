@@ -1,3 +1,4 @@
+![test](https://github.com/highbridge-yayoi/usb_device_checker/actions/workflows/test.yml/badge.svg)
 # usb_device_checker
 特定のUSBデバイスの接続状態を監視するROS 2パッケージ．
 ## 概要
