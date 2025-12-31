@@ -3,7 +3,7 @@ from rclpy.node import Node
 from std_msgs.msg import Bool
 import os
 
-class USBMonitorNode(Node):
+class MultiUSBMonitorNode(Node):
     def __init__(self):
         super().__init__('usb_monitor_node')
         
