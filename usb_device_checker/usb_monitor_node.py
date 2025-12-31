@@ -1,7 +1,8 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Bool
+from std_msgs.msg import String
 import os
+import json
 
 class MultiUSBMonitorNode(Node):
     def __init__(self):
