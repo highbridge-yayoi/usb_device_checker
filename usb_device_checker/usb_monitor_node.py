@@ -13,6 +13,8 @@ class MultiUSBMonitorNode(Node):
         self.declare_parameter('device_paths', ['/dev/ttyUSB0', '/dev/video0'])
         self.declare_parameter('check_interval', 1.0)
         
+        self.last_states = {}
+
         self.publisher_ = self.create_publisher(String, 'usb_status_json', 10)
         
         interval = self.get_parameter('check_interval').get_parameter_value().double_value
@@ -28,10 +30,19 @@ class MultiUSBMonitorNode(Node):
             # デバイスの存在チェック
             is_connected = os.path.exists(path)
             results[path] = is_connected
-            
-            # 切断された時だけ警告ログを出す
-            if not is_connected:
-                self.get_logger().warning(f"Device DISCONNECTED: {path}")
+
+            # 以前の状態を取得（登録がなければ None）
+            previous_state = self.last_states.get(path, None)
+
+            if is_connected != previous_state:
+                # 状態が変化した（または初回チェック）
+                if is_connected:
+                    self.get_logger().info(f"Device CONNECTED: {path}")
+                else:
+                    self.get_logger().warning(f"Device DISCONNECTED: {path}")
+                
+                # 状態を更新
+                self.last_states[path] = is_connected
 
         # 結果をJSON文字列にして配信
         msg = String()
