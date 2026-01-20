@@ -20,6 +20,12 @@
 - `check_interval` (double): 監視の周期（秒）.
 
 ## 使用方法
+### Launchファイルでの起動（推奨）
+   ```bash
+   $ ros2 launch usb_device_checker usb_monitor.launch.py
+   ```
+
+### コマンドラインでの起動
 1. ノードを実行:
    ```bash
    $ ros2 run usb_device_checker usb_monitor --ros-args -p device_paths:=['/dev/ttyUSB0']
@@ -37,10 +43,6 @@
     - 「USBデバイスをWSL2へ転送するツール」を使用して，WSL2内でUSBデバイスを認識する必要があります．
     - 動作確認がしたいだけなら，launch/usb_monitor.launch.py の device_paths を書き換えてください．
 
-### Launchファイルでの起動（推奨）
-   ```bash
-   $ ros2 launch usb_device_checker usb_monitor.launch.py
-   ```
 
 ## 動作環境
 - OS: Ubuntu 22.04 (WSL2 動作確認済み)
