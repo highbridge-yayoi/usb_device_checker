@@ -8,3 +8,13 @@ jobs:
     runs-on: ubuntu-22.04
     container: ryuichiueda/ubuntu22.04-ros2:latest
     strategy:
+    matrix:
+        python-version: ["3.10"]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: build and test
+        run: |
+          rsync -av ./ /root/ros2_ws/src/usb_device_checker/
+          cd /root/ros2_ws
+          bash -xv ./src/usb_device_checker/test/test_usb_device_checker.bash /root
