@@ -8,3 +8,6 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/ros2_ws/install/setup.bash
+
+ros2 run usb_device_checker usb_monitor --ros-args -p device_paths:='["/dev/null"]' &
+node_pid=$!
