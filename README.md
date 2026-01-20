@@ -13,7 +13,7 @@
 - `usb_monitor_node`: 指定されたデバイスパスの存在を監視し、結果を配信します.
 
 ### 配信トピック
-- `/usb_status_json` ([std_msgs/String]): 監視対象の接続状態をJSON形式で配信します.
+- `/usb_status_json`([std_msgs/String]): 監視対象の接続状態をJSON形式で配信します.
 
 ### パラメータ
 - `device_paths` (string_array): 監視するデバイスパスのリスト.
