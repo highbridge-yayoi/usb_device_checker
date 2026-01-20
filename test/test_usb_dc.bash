@@ -19,3 +19,6 @@ res=$?
 
 kill $node_pid
 
+if [ $res -eq 0 ]; then
+  echo "TEST PASSED"
+  exit 0
