@@ -9,15 +9,11 @@
 - launchファイルをによる入力の簡易化
 
 ## 使用方法
-1. Launchファイルでの起動（推奨）
-   ```bash
-   $ ros2 launch usb_device_checker usb_monitor.launch.py
-   ```
-2. ノードを実行:
+1. ノードを実行:
    ```bash
    $ ros2 run usb_device_checker usb_monitor --ros-args -p device_path:=「/dev/ttyUSB0」
    ```
-3. 別ターミナルでROS 2のトピックを確認:
+2. 別ターミナルでROS 2のトピックを確認:
    ```bash
    $ ros2 topic echo /usb_status_json
    data: '{"/dev/null": true, "/dev/ttys0": false, "/dev/dummy": false}'
