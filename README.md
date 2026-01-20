@@ -1,6 +1,6 @@
 ![test](https://github.com/highbridge-yayoi/usb_device_checker/actions/workflows/test.yml/badge.svg)
 # usb_device_checker
-特定のUSBデバイスの接続状態を監視するROS 2パッケージ．
+特定のUSBデバイスの接続状態を監視するノードを含むROS 2パッケージ．
 ## 概要
 指定したデバイスパス（例：`/dev/ttyUSB0`）の存在を確認し，接続状態に変化があった場合にログを表示すると同時に，現在のステータスをJSON形式で配信します．
 
