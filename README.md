@@ -31,13 +31,13 @@
 - **device_paths** (string_array): 監視するデバイスパスのリスト.
 - **check_interval** (double): 監視の周期（秒）.
 
-# 注意事項
-## 動作不良について
+## 注意事項
+### 動作不良について
 - WSL2環境では，USBデバイスの接続状態を監視することができない可能性があります．
     - 「USBデバイスをWSL2へ転送するツール」を使用して，WSL2内でUSBデバイスを認識する必要があります．
     - 動作確認がしたいだけなら，launch/usb_monitor.launch.py の device_paths を書き換えてください．
 
-## Launchファイルでの起動（推奨）
+### Launchファイルでの起動（推奨）
    ```bash
    $ ros2 launch usb_device_checker usb_monitor.launch.py
    ```
