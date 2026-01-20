@@ -8,6 +8,17 @@
 - USBチェッカー
 - launchファイルをによる入力の簡易化
 
+## ノードとトピックの一覧
+### ノード
+- **usb_monitor_node**: 指定されたデバイスパスの存在を監視し、結果を配信します.
+
+### 配信トピック
+- **/usb_status_json** ([std_msgs/String]): 監視対象の接続状態をJSON形式で配信します.
+
+### パラメータ
+- **device_paths** (string_array): 監視するデバイスパスのリスト.
+- **check_interval** (double): 監視の周期（秒）.
+
 ## 使用方法
 1. ノードを実行:
    ```bash
@@ -19,17 +30,6 @@
    data: '{"/dev/null": true, "/dev/ttys0": false, "/dev/dummy": false}'
    ---
    ```
-
-## ノードとトピックの一覧
-### ノード
-- **usb_monitor_node**: 指定されたデバイスパスの存在を監視し、結果を配信します.
-
-### 配信トピック
-- **/usb_status_json** ([std_msgs/String]): 監視対象の接続状態をJSON形式で配信します.
-
-### パラメータ
-- **device_paths** (string_array): 監視するデバイスパスのリスト.
-- **check_interval** (double): 監視の周期（秒）.
 
 ## 注意事項
 ### 動作不良について
