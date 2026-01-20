@@ -16,3 +16,6 @@ sleep 5
 timeout 10 ros2 topic echo /usb_status_json | grep -q "/dev/null"
 
 res=$?
+
+kill $node_pid
+
